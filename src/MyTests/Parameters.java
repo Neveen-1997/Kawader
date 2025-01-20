@@ -1204,7 +1204,7 @@ public class Parameters {
 		Thread.sleep(1000);
 
 		assertTrue(driver.findElement(By.id("notistack-snackbar")).isDisplayed(), "JOB NOT ADDED");
-		
+
 		Thread.sleep(1000);
 
 	}
@@ -1355,8 +1355,8 @@ public class Parameters {
 
 		GenderField.click();
 
-		WebElement ConTypeField = driver
-				.findElement(By.xpath("//body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[9]/select[1]"));
+		WebElement ConTypeField = driver.findElement(By.cssSelector(
+				"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > form:nth-child(2) > div:nth-child(9) > select:nth-child(2)"));
 
 		Select selector1 = new Select(ConTypeField);
 
@@ -1367,7 +1367,7 @@ public class Parameters {
 		DurationField.sendKeys("1");
 
 		WebElement PlaceField = driver.findElement(By.cssSelector(
-				"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(2) > div:nth-child(11) > select:nth-child(2)"));
+				"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > form:nth-child(2) > div:nth-child(11) > select:nth-child(2)"));
 
 		Select selector2 = new Select(PlaceField);
 
@@ -1390,12 +1390,12 @@ public class Parameters {
 		TasksField.sendKeys("إنشاء واجهات ويب");
 
 		WebElement AddSubTasksBtn = driver.findElement(By.cssSelector(
-				"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(2) > div:nth-child(23) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > button:nth-child(2)"));
+				"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > form:nth-child(2) > div:nth-child(23) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > button:nth-child(2)"));
 
 		AddSubTasksBtn.click();
 
 		driver.findElement(By.cssSelector(
-				"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(2) > div:nth-child(23) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)"))
+				"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > form:nth-child(2) > div:nth-child(23) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)"))
 				.sendKeys(" تصميم واجهة المستخدم");
 
 		WebElement SaveBtn = driver.findElement(By.xpath("//button[contains(text(),'حفظ وإرسال')]"));
@@ -1838,17 +1838,16 @@ public class Parameters {
 		Feedback.sendKeys("good");
 
 		WebElement DateField = driver.findElement(By.cssSelector("label[id=':r38:-label']"));
-		
+
 		DateField.click();
 
 		DateField.sendKeys(Keys.ENTER);
-		
-		WebElement ConfirmationBtn=driver.findElement(By.cssSelector(""));
-		
+
+		WebElement ConfirmationBtn = driver.findElement(By.cssSelector(""));
+
 		ConfirmationBtn.click();
-		
-		WebElement AcceptedBtn = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("المقبولين")));
+
+		WebElement AcceptedBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("المقبولين")));
 
 		AcceptedBtn.click();
 
@@ -1857,10 +1856,10 @@ public class Parameters {
 
 		JobDetailsBtn2.click();
 
-		Boolean StudentNeveen  = driver.findElement(By.cssSelector(
-				"tr[class='MuiTableRow-root cursor-pointer hover:bg-[#d1d1d1] muirtl-1jec563'] td:nth-child(3)")).isDisplayed()
-				;
-		
+		Boolean StudentNeveen = driver.findElement(By.cssSelector(
+				"tr[class='MuiTableRow-root cursor-pointer hover:bg-[#d1d1d1] muirtl-1jec563'] td:nth-child(3)"))
+				.isDisplayed();
+
 		assertTrue(StudentNeveen, "there is something wrong ");
 
 	}

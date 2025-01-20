@@ -6,7 +6,7 @@
       <class name="MyTests.MyTestCasesForCom">
         <methods>
           <include name="mySetup"/>
-          <include name="TestAddJob2"/>
+          <include name="TestAddJob3"/>
         </methods>
       </class> <!-- MyTests.MyTestCasesForCom -->
     </classes>

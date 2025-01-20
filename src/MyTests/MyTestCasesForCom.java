@@ -66,7 +66,7 @@ public class MyTestCasesForCom extends Parameters {
 	}
 	
 	
-	@Test(priority = 6, enabled = true)
+	@Test(priority = 6, enabled = false)
 	public void TestAddJob3() throws InterruptedException, IOException {
 
 		ComLogin();

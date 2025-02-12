@@ -1,4 +1,4 @@
-package MyTests;
+package MyTests.src.MyTests;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -46,7 +46,7 @@ public class MyTestCasesForCom extends Parameters {
 	}
 	
 	
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public void TestAddJob1() throws InterruptedException {
 
 		ComLogin();

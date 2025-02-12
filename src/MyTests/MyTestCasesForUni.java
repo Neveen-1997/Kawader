@@ -1,4 +1,4 @@
-package MyTests;
+package MyTests.src.MyTests;
 
 import java.io.IOException;
 import java.time.Duration;

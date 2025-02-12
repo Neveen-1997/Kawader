@@ -1,4 +1,4 @@
-package MyTests;
+package MyTests.src.MyTests;
 
 import org.testng.AssertJUnit;
 import static org.testng.Assert.assertEquals;
